@@ -30,6 +30,13 @@ export default {
       return new Response(JSON.stringify({ received: true }), { status: 200 });
     }
 
+    if (url.pathname === '/feedbackSummary' && request.method === 'GET') {
+      return new Response(JSON.stringify({ status: 'ok', note: 'Summary endpoint placeholder' }), {
+        status: 200,
+        headers: { 'content-type': 'application/json' },
+      });
+    }
+
     return new Response(JSON.stringify({ error: 'Not found' }), { status: 404 });
   },
 };
