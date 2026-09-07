@@ -25,7 +25,10 @@ export default {
         return new Response(JSON.stringify({ error: 'Invalid feedback payload' }), { status: 400 });
       }
 
-      console.log('Received feedback with rating:', body.rating);
+      console.log('Received feedback request:', {
+        headers: Object.fromEntries(request.headers),
+        body,
+      });
 
       return new Response(JSON.stringify({ received: true }), { status: 200 });
     }
