@@ -13,5 +13,3 @@ Guidance for AI coding agents working in this repository.
 Every new route must have at least one integration test covering both the
 success path and a validation failure. Tests live alongside the handler
 in the same file, using the existing `wrangler dev` local test harness.
-
-4. All new route paths must be kebab-case (e.g., `/feedback-summary`), never camelCase (e.g., `/feedbackSummary`). This is an internal convention, not a general best practice — enforced for consistency across services.
