@@ -32,7 +32,7 @@ export default {
 
     // Placeholder summary endpoint; real aggregation lands later.
     if (url.pathname === '/feedbackSummary' && request.method === 'GET') {
-      return new Response(JSON.stringify({ status: 'ok', note: 'Summary endpoint placeholder' }), {
+      return new Response(JSON.stringify({ status: 'ok', note: 'Summary endpoint placeholder', version: 1 }), {
         status: 200,
         headers: { 'content-type': 'application/json' },
       });
